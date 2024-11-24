@@ -20,8 +20,9 @@ const Login = () => {
     console.log(fethedData)
     Cookie.set('jwtToken', fethedData.data.jwtToken)
     navigate('/about')
-
   }
+
+  const jwtToken = Cookie.get('jwtToken')
 
   return (
     <form onSubmit={onSubmitHandler}>
